@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net6.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <UseWPF>true</UseWPF>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <!-- Release refs -->
+	<ItemGroup>
+		<Reference Include="Vector.Lib">
+			<HintPath>..\..\..\Build\vector-lib\Vector.Lib\Vector.Lib.dll</HintPath>
+		</Reference>
+        <Reference Include="Sim.Core">
+			<HintPath>..\..\..\Build\sim-core\Sim.Core\Sim.Core.dll</HintPath>
+		</Reference>
+        <Reference Include="Canvas">
+			<HintPath>..\..\..\Build\canvas\Canvas\Canvas.dll</HintPath>
+		</Reference>
+        <Reference Include="Shape.Model">
+			<HintPath>..\..\..\Build\shape-model\Shape.Model\Shape.Model.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+    
+    <ItemGroup>
+        <Compile Update="DialogView.xaml.cs">
+            <DependentUpon>DialogView.xaml</DependentUpon>
+        </Compile>
+        <Compile Update="EditorView.xaml.cs">
+            <DependentUpon>EditorView.xaml</DependentUpon>
+        </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Page Update="DialogView.xaml">
+            <SubType>Designer</SubType>
+        </Page>
+        <Page Update="EditorView.xaml">
+            <SubType>Designer</SubType>
+        </Page>
+    </ItemGroup>
+
+</Project>
