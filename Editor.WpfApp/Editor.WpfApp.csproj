@@ -8,8 +8,23 @@
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
 
+    <!-- Debug refs -->
+    <ItemGroup>
+        <Reference Include="Vector.Lib">
+			<HintPath>..\..\vector-lib\Vector.Lib\bin\Debug\net6.0\Vector.Lib.dll</HintPath>
+		</Reference>
+        <Reference Include="Sim.Core">
+			<HintPath>..\..\sim-core\Sim.Core\bin\Debug\net6.0-windows\Sim.Core.dll</HintPath>
+		</Reference>
+        <Reference Include="Canvas">
+			<HintPath>..\..\canvas\Canvas\bin\Debug\net6.0-windows\Canvas.dll</HintPath>
+		</Reference>
+        <Reference Include="Shape.Model">
+			<HintPath>..\..\shape-model\Shape.Model\bin\Debug\net6.0-windows\Shape.Model.dll</HintPath>
+		</Reference>
+	</ItemGroup>
     <!-- Release refs -->
-	<ItemGroup>
+	<!-- <ItemGroup>
 		<Reference Include="Vector.Lib">
 			<HintPath>..\..\..\Build\vector-lib\Vector.Lib\Vector.Lib.dll</HintPath>
 		</Reference>
@@ -22,7 +37,7 @@
         <Reference Include="Shape.Model">
 			<HintPath>..\..\..\Build\shape-model\Shape.Model\Shape.Model.dll</HintPath>
 		</Reference>
-	</ItemGroup>
+	</ItemGroup> -->
     
     <ItemGroup>
         <Compile Update="DialogView.xaml.cs">
